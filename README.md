@@ -1,4 +1,4 @@
-# kUSD Legder application
+# kUSD Ledger application
 
 kUSD wallet application framework for Ledger Blue and Nano S.
 
