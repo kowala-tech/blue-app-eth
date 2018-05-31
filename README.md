@@ -1,15 +1,20 @@
-# blue-app-eth
-Ethereum wallet application framework for Ledger Blue and Nano S
+# kUSD Legder application
 
-This follows the specification available in the doc/ folder
+kUSD wallet application framework for Ledger Blue and Nano S.
 
-To use the generic wallet (which disables all data transaction) refer to signTx.py (requires rlp package) or Ledger Ethereum Wallet Chrome application available on Github at https://github.com/LedgerHQ/ledger-wallet-ethereum-chrome or the Chrome Web store at https://chrome.google.com/webstore/detail/ledger-wallet-ethereum/hmlhkialjkaldndjnlcdfdphcgeadkkm 
+In order to build the application:
 
-Other examples are provided reusing the Ethereum parsing framwork to implement some advanced use cases : 
+1. Configure your development environment as outlined in the [official documentation](https://ledger.readthedocs.io/en/latest/userspace/getting_started.html).
+2. Run `make`.
 
-  * An ETH/ETC splitting contract - see src_chainsplit, splitEther.py and our Medium post at https://blog.ledger.co/splitting-your-ethers-securely-on-your-nano-s-147f20e9e341
-  * An unsupported use case (transferring The DAO (RIP) tokens), using deprecated code - see src_daosend 
+In order to load the application nto a device:
 
+1. Configure the python loader as described in the [doumentation](https://github.com/LedgerHQ/blue-loader-python).
+2. Run `make load`.
 
-For more information about the parsing framework you can refer to https://medium.com/@Ledger/dynamic-secure-applications-with-bolos-and-ledger-blue-a-use-case-with-ethereum-and-the-dao-6be91260e89f#.204qgmogo 
+Todo:
+
+- Dockerisation
+- CI build
+- Binary releasest
 
