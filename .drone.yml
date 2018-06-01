@@ -8,7 +8,14 @@ pipeline:
 
   github_release:
     image: plugins/github-release
-    secrets: [ github_token ]
+    secrets: [ github_release_api_key ]
     files: bin/*
+    checksum:
+      - md5
+      - sha1
+      - sha256
+      - sha512
+      - adler32
+      - crc32
     when:
       event: tag
