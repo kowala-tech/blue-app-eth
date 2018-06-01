@@ -15,7 +15,8 @@
 #  limitations under the License.
 #*******************************************************************************
 
-CHAIN ?= kusd
+CHAIN  ?= kusd
+PYTHON ?= python
 
 ifeq ($(BOLOS_SDK),)
 $(error Environment variable BOLOS_SDK is not set)
@@ -107,10 +108,10 @@ SDK_SOURCE_PATH  += lib_stusb
 
 
 load: all
-	python -m ledgerblue.loadApp $(APP_LOAD_PARAMS)
+	$(PYTHON) -m ledgerblue.loadApp $(APP_LOAD_PARAMS)
 
 delete:
-	python -m ledgerblue.deleteApp $(COMMON_DELETE_PARAMS)
+	$(PYTHON) -m ledgerblue.deleteApp $(COMMON_DELETE_PARAMS)
 
 # import generic rules from the sdk
 include $(BOLOS_SDK)/Makefile.rules

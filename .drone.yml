@@ -1,0 +1,14 @@
+pipeline:
+  test:
+    image: kowalatech/ledger
+    commands:
+      - make
+    when:
+      event: [push,tag]
+
+  github_release:
+    image: plugins/github-release
+    secrets: [ github_token ]
+    files: bin/*
+    when:
+      event: tag
